@@ -1,8 +1,8 @@
 .Game {
-  width: 30%;
+  width: 40%;
   background: white;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
-  margin: 0 30%;
+  margin: 0 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@ h2 {
   display: inline-block;
 }
 .Game-dice-section {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -71,7 +71,7 @@ h2 {
 .Game-header {
   width: 100%;
   background: linear-gradient(-45deg, #673ab7, #9c27b0);
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
@@ -86,5 +86,11 @@ h2 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Game {
+    width: 100%;
   }
 }

@@ -1,5 +1,7 @@
 .RuleRow {
   transition: all 0.2s;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 .RuleRow-active:hover {
   cursor: pointer;

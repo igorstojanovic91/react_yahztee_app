@@ -5,13 +5,13 @@
   width: 80%;
   background-color: white;
   padding: 1em;
-  padding-left: 0em
+  padding-left: 0em;
 }
 
 .ScoreTable table {
   width: 100%;
   margin: 0 auto;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .ScoreTable-section {
