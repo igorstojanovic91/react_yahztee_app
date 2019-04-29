@@ -34,6 +34,7 @@ class Game extends Component {
     this.doScore = this.doScore.bind(this);
     this.toggleLocked = this.toggleLocked.bind(this)
     this.animateRoll = this.animateRoll.bind(this)
+    this.displayRollInfo = this.displayRollInfo.bind(this)
   }
 
   //is executed when page loads
@@ -81,10 +82,23 @@ class Game extends Component {
       rollsLeft: NUM_ROLLS,
       locked: Array(NUM_DICE).fill(false)
     }));
-    this.roll();
+
+    this.animateRoll();
+  }
+
+  displayRollInfo() {
+    const messages = [
+      "0 Rolls left",
+      "1 Roll left",
+      "2 Rolls left",
+      "...1st Roll..."
+    ]
+
+    return messages[this.state.rollsLeft]
   }
 
   render() {
+
     return (
       <div className='Game'>
         <header className='Game-header'>
@@ -104,7 +118,7 @@ class Game extends Component {
                 disabled={this.state.locked.every(x => x) || this.state.rollsLeft === 0}
                 onClick={this.animateRoll}
               >
-                {this.state.rollsLeft} Rerolls Left
+                {this.displayRollInfo()}
               </button>
             </div>
           </section>
